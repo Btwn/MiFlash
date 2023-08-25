@@ -1,0 +1,11 @@
+[12:43:14 p. m.]:1    c369e2b4     649.5771495s     flash done
+[12:53:00 p. m.]:1    c369e2b4     0.5722876s     error:Missmatching image and device
+[12:53:25 p. m.]:1    c369e2b4     0.505657s     error:Missmatching image and device
+[12:55:58 p. m.]:1    c369e2b4     0.5806374s     error:Erasing 'boot_ab'                                  FAILED (remote: 'Erase is not allowed in Lock State')
+[12:57:20 p. m.]:1    c369e2b4     0.6653913s     error:Erasing 'boot_ab'                                  FAILED (remote: 'Erase is not allowed in Lock State')
+[01:09:49 p. m.]:1    c369e2b4     0.5267878s     error:Missmatching image and device
+[01:10:17 p. m.]:1    c369e2b4     0.4238365s     can not found file flash_all_lock.bat
+[01:10:35 p. m.]:1    c369e2b4     0.4171506s     error:Erasing 'boot_ab'                                  FAILED (remote: 'Erase is not allowed in Lock State')
+[01:51:41 p. m.]:1    c369e2b4     0.511077s     error:Erasing 'boot_ab'                                  FAILED (remote: 'Erase is not allowed in Lock State')
+[01:57:59 p. m.]:1    c369e2b4     0.3979781s     error:Erasing 'boot_ab'                                  FAILED (remote: 'Erase is not allowed in Lock State')
+[04:13:59 p. m.]:1    c369e2b4     0.5233013s     error:Erasing 'boot_ab'                                  FAILED (remote: 'Erase is not allowed in Lock State')

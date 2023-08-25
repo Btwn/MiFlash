@@ -1,0 +1,52 @@
+[12:57:19 p. m.  c369e2b4]:MiFlash 2020.3.14.0
+[12:57:19 p. m.  c369e2b4]:vboytest index:1
+[12:57:19 p. m.  c369e2b4]:idproduct: 53261 idvendor: 6353
+[12:57:19 p. m.  c369e2b4]:Thread id:19 Thread name:c369e2b4
+[12:57:19 p. m.  c369e2b4]:image path:D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0
+[12:57:19 p. m.  c369e2b4]:env android path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Google\Android"
+[12:57:19 p. m.  c369e2b4]:script :D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\flash_all_lock.bat
+[12:57:19 p. m.  c369e2b4]:Physical Memory Usage:3825664 Byte
+[12:57:19 p. m.  c369e2b4]:start process id 18880 name cmd
+[12:57:19 p. m.  c369e2b4]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *zeus"   || echo Missmatching image and device 
+[12:57:19 p. m.  c369e2b4]:info1:product: zeus
+[12:57:19 p. m.  c369e2b4]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *zeus"   || exit /B 1 
+[12:57:19 p. m.  c369e2b4]:info1:product: zeus
+[12:57:19 p. m.  c369e2b4]:info1:$if exist "D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images\anti_version.txt" (for /F "usebackq" %a in ("D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images\anti_version.txt") do (set CURRENT_ANTI_VER=%a ) ) 
+[12:57:19 p. m.  c369e2b4]:info1:$(set CURRENT_ANTI_VER=1 ) 
+[12:57:19 p. m.  c369e2b4]:info1:$if [1] EQU [] set CURRENT_ANTI_VER=0 
+[12:57:19 p. m.  c369e2b4]:info1:$for /F "tokens=2 delims=: " %i in ('fastboot -s devicename getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i ) 
+[12:57:19 p. m.  c369e2b4]:info1:$(set version=1 ) 
+[12:57:19 p. m.  c369e2b4]:info1:$if [1] EQU [] set version=0 
+[12:57:19 p. m.  c369e2b4]:info1:$set anticheck="antirollback check pass" 
+[12:57:19 p. m.  c369e2b4]:info1:$if 1 GTR 1 set anticheck="Current device antirollback version is greater than this pakcage" 
+[12:57:19 p. m.  c369e2b4]:info1:$echo "antirollback check pass"   | findstr /r /c:"pass"   || 
+[12:57:19 p. m.  c369e2b4]:info1:"antirollback check pass" 
+[12:57:19 p. m.  c369e2b4]:info1:$for /F "tokens=2 delims=: " %i in ('fastboot -s devicename getvar hw-revision 2>&1 | findstr /r /c:"hw-revision: "') do (set hwversion=%i ) 
+[12:57:19 p. m.  c369e2b4]:info1:$(set hwversion=20002 ) 
+[12:57:19 p. m.  c369e2b4]:info1:$if [20002] EQU [] set hwversion=0 
+[12:57:19 p. m.  c369e2b4]:info1:$IF 20002 LEQ 10000 (
+[12:57:19 p. m.  c369e2b4]:info1: 
+[12:57:19 p. m.  c369e2b4]:info1: exit /B 1 
+[12:57:19 p. m.  c369e2b4]:info1:) 
+[12:57:19 p. m.  c369e2b4]:info1:$fastboot -s devicename getvar crc   2>&1  | findstr /r /c:"^crc: 1"   && if 0 EQU 0 (
+[12:57:19 p. m.  c369e2b4]:info1:fastboot -s devicename flash crclist D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images\crclist.txt   ||  
+[12:57:19 p. m.  c369e2b4]:info1: fastboot -s devicename flash sparsecrclist D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images\sparsecrclist.txt   || 
+[12:57:19 p. m.  c369e2b4]:info1:) 
+[12:57:19 p. m.  c369e2b4]:info1:crc: 1
+[12:57:19 p. m.  c369e2b4]:info2:Sending 'crclist' (0 KB)                           OKAY [  0.001s]
+[12:57:19 p. m.  c369e2b4]:info2:Writing 'crclist'                                  OKAY [  0.004s]
+[12:57:19 p. m.  c369e2b4]:info2:Finished. Total time: 0.016s
+[12:57:19 p. m.  c369e2b4]:info2:Sending 'sparsecrclist' (0 KB)                     OKAY [  0.001s]
+[12:57:19 p. m.  c369e2b4]:info2:Writing 'sparsecrclist'                            OKAY [  0.001s]
+[12:57:19 p. m.  c369e2b4]:info2:Finished. Total time: 0.015s
+[12:57:19 p. m.  c369e2b4]:info1:$fastboot -s devicename erase boot_ab   || 
+[12:57:19 p. m.  c369e2b4]:info2:Erasing 'boot_ab'                                  FAILED (remote: 'Erase is not allowed in Lock State')
+[12:57:19 p. m.  c369e2b4]:info2:fastboot: error: Command failed
+[12:57:19 p. m.  c369e2b4]:info1:"Erase boot error" 
+[12:57:19 p. m.  c369e2b4]:begin FlashDone
+[12:57:19 p. m.  c369e2b4]:error:Erasing 'boot_ab'                                  FAILED (remote: 'Erase is not allowed in Lock State')
+[12:57:19 p. m.  c369e2b4]:process exit.
+[12:57:20 p. m.  c369e2b4]:flashSuccess False
+[12:57:20 p. m.  c369e2b4]:isFactory False CheckCPUID False
+[12:57:20 p. m.  c369e2b4]:before:flashSuccess is False set IsUpdate:True set IsDone True
+[12:57:20 p. m.  c369e2b4]:after:flashSuccess is False set IsUpdate:false set IsDone true

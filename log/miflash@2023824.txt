@@ -1,0 +1,87 @@
+[12:32:23 p. m.]:lsusb path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[12:32:23 p. m.]:GetScriptDevices
+[12:32:23 p. m.]:add device c369e2b4 index 1
+[12:32:24 p. m.]:lsusb path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[12:32:24 p. m.]:GetScriptDevices
+[12:32:24 p. m.]:FlashingDevice.flashDeviceList.Remove c369e2b4
+[12:32:24 p. m.]:add device c369e2b4 index 1
+[12:32:25 p. m.]:Thread start,thread id 9,thread name c369e2b4
+[12:32:25 p. m.]:start process id 21480 name cmd
+[12:43:14 p. m.]:Thread stopped, thread id 9, thread name c369e2b4
+[12:52:54 p. m.]:lsusb path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[12:52:54 p. m.]:GetScriptDevices
+[12:52:56 p. m.]:FlashingDevice.flashDeviceList.Remove c369e2b4
+[12:52:56 p. m.]:add device c369e2b4 index 1
+[12:52:59 p. m.]:Thread start,thread id 20,thread name c369e2b4
+[12:52:59 p. m.]:start process id 276 name cmd
+[12:53:00 p. m.]:Thread stopped, thread id 20, thread name c369e2b4
+[12:53:22 p. m.]:lsusb path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[12:53:23 p. m.]:GetScriptDevices
+[12:53:23 p. m.]:add device c369e2b4 index 1
+[12:53:24 p. m.]:lsusb path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[12:53:24 p. m.]:GetScriptDevices
+[12:53:24 p. m.]:FlashingDevice.flashDeviceList.Remove c369e2b4
+[12:53:24 p. m.]:add device c369e2b4 index 1
+[12:53:24 p. m.]:Thread start,thread id 9,thread name c369e2b4
+[12:53:24 p. m.]:start process id 6812 name cmd
+[12:53:25 p. m.]:Thread stopped, thread id 9, thread name c369e2b4
+[12:55:54 p. m.]:lsusb path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[12:55:54 p. m.]:GetScriptDevices
+[12:55:54 p. m.]:FlashingDevice.flashDeviceList.Remove c369e2b4
+[12:55:54 p. m.]:add device c369e2b4 index 1
+[12:55:57 p. m.]:Thread start,thread id 11,thread name c369e2b4
+[12:55:57 p. m.]:start process id 18864 name cmd
+[12:55:58 p. m.]:Thread stopped, thread id 11, thread name c369e2b4
+[12:57:17 p. m.]:lsusb path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[12:57:18 p. m.]:GetScriptDevices
+[12:57:18 p. m.]:FlashingDevice.flashDeviceList.Remove c369e2b4
+[12:57:18 p. m.]:add device c369e2b4 index 1
+[12:57:19 p. m.]:Thread start,thread id 19,thread name c369e2b4
+[12:57:19 p. m.]:start process id 18880 name cmd
+[12:57:20 p. m.]:Thread stopped, thread id 19, thread name c369e2b4
+[01:09:46 p. m.]:lsusb path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[01:09:46 p. m.]:GetScriptDevices
+[01:09:46 p. m.]:add device c369e2b4 index 1
+[01:09:48 p. m.]:Thread start,thread id 8,thread name c369e2b4
+[01:09:48 p. m.]:start process id 12740 name cmd
+[01:09:49 p. m.]:Thread stopped, thread id 8, thread name c369e2b4
+[01:10:16 p. m.]:lsusb path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[01:10:16 p. m.]:GetScriptDevices
+[01:10:16 p. m.]:FlashingDevice.flashDeviceList.Remove c369e2b4
+[01:10:16 p. m.]:add device c369e2b4 index 1
+[01:10:17 p. m.]:Thread start,thread id 14,thread name c369e2b4
+[01:10:17 p. m.]:Thread stopped, thread id 14, thread name c369e2b4
+[01:10:34 p. m.]:lsusb path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[01:10:34 p. m.]:GetScriptDevices
+[01:10:34 p. m.]:FlashingDevice.flashDeviceList.Remove c369e2b4
+[01:10:34 p. m.]:add device c369e2b4 index 1
+[01:10:35 p. m.]:Thread start,thread id 11,thread name c369e2b4
+[01:10:35 p. m.]:start process id 21344 name cmd
+[01:10:35 p. m.]:Thread stopped, thread id 11, thread name c369e2b4
+[01:51:35 p. m.]:lsusb path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[01:51:35 p. m.]:GetScriptDevices
+[01:51:35 p. m.]:add device c369e2b4 index 1
+[01:51:40 p. m.]:lsusb path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[01:51:40 p. m.]:GetScriptDevices
+[01:51:40 p. m.]:FlashingDevice.flashDeviceList.Remove c369e2b4
+[01:51:40 p. m.]:add device c369e2b4 index 1
+[01:51:40 p. m.]:Thread start,thread id 9,thread name c369e2b4
+[01:51:41 p. m.]:start process id 15196 name cmd
+[01:51:41 p. m.]:Thread stopped, thread id 9, thread name c369e2b4
+[01:57:57 p. m.]:lsusb path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[01:57:57 p. m.]:GetScriptDevices
+[01:57:57 p. m.]:FlashingDevice.flashDeviceList.Remove c369e2b4
+[01:57:57 p. m.]:add device c369e2b4 index 1
+[01:57:58 p. m.]:lsusb path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[01:57:59 p. m.]:GetScriptDevices
+[01:57:59 p. m.]:FlashingDevice.flashDeviceList.Remove c369e2b4
+[01:57:59 p. m.]:add device c369e2b4 index 1
+[01:57:59 p. m.]:Thread start,thread id 4,thread name c369e2b4
+[01:57:59 p. m.]:start process id 14356 name cmd
+[01:57:59 p. m.]:Thread stopped, thread id 4, thread name c369e2b4
+[04:13:55 p. m.]:lsusb path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[04:13:55 p. m.]:GetScriptDevices
+[04:13:55 p. m.]:add device c369e2b4 index 1
+[04:13:58 p. m.]:Thread start,thread id 8,thread name c369e2b4
+[04:13:58 p. m.]:start process id 17172 name cmd
+[04:13:59 p. m.]:Thread stopped, thread id 8, thread name c369e2b4

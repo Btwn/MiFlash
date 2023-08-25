@@ -1,0 +1,312 @@
+[12:32:25 p. m.  c369e2b4]:MiFlash 2020.3.14.0
+[12:32:25 p. m.  c369e2b4]:vboytest index:1
+[12:32:25 p. m.  c369e2b4]:idproduct: 53261 idvendor: 6353
+[12:32:25 p. m.  c369e2b4]:Thread id:9 Thread name:c369e2b4
+[12:32:25 p. m.  c369e2b4]:image path:D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0
+[12:32:25 p. m.  c369e2b4]:env android path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Google\Android"
+[12:32:25 p. m.  c369e2b4]:script :D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\flash_all_lock.bat
+[12:32:25 p. m.  c369e2b4]:Physical Memory Usage:3825664 Byte
+[12:32:25 p. m.  c369e2b4]:start process id 21480 name cmd
+[12:32:25 p. m.  c369e2b4]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *zeus"   || echo Missmatching image and device 
+[12:32:25 p. m.  c369e2b4]:info1:product: zeus
+[12:32:25 p. m.  c369e2b4]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *zeus"   || exit /B 1 
+[12:32:25 p. m.  c369e2b4]:info1:product: zeus
+[12:32:25 p. m.  c369e2b4]:info1:$if exist "D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images\anti_version.txt" (for /F "usebackq" %a in ("D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images\anti_version.txt") do (set CURRENT_ANTI_VER=%a ) ) 
+[12:32:25 p. m.  c369e2b4]:info1:$(set CURRENT_ANTI_VER=1 ) 
+[12:32:25 p. m.  c369e2b4]:info1:$if [1] EQU [] set CURRENT_ANTI_VER=0 
+[12:32:25 p. m.  c369e2b4]:info1:$for /F "tokens=2 delims=: " %i in ('fastboot -s devicename getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i ) 
+[12:32:25 p. m.  c369e2b4]:info1:$(set version=1 ) 
+[12:32:25 p. m.  c369e2b4]:info1:$if [1] EQU [] set version=0 
+[12:32:25 p. m.  c369e2b4]:info1:$set anticheck="antirollback check pass" 
+[12:32:25 p. m.  c369e2b4]:info1:$if 1 GTR 1 set anticheck="Current device antirollback version is greater than this pakcage" 
+[12:32:25 p. m.  c369e2b4]:info1:$echo "antirollback check pass"   | findstr /r /c:"pass"   || 
+[12:32:25 p. m.  c369e2b4]:info1:"antirollback check pass" 
+[12:32:25 p. m.  c369e2b4]:info1:$for /F "tokens=2 delims=: " %i in ('fastboot -s devicename getvar hw-revision 2>&1 | findstr /r /c:"hw-revision: "') do (set hwversion=%i ) 
+[12:32:25 p. m.  c369e2b4]:info1:$(set hwversion=20002 ) 
+[12:32:25 p. m.  c369e2b4]:info1:$if [20002] EQU [] set hwversion=0 
+[12:32:25 p. m.  c369e2b4]:info1:$IF 20002 LEQ 10000 (
+[12:32:25 p. m.  c369e2b4]:info1: 
+[12:32:25 p. m.  c369e2b4]:info1: exit /B 1 
+[12:32:25 p. m.  c369e2b4]:info1:) 
+[12:32:25 p. m.  c369e2b4]:info1:$fastboot -s devicename getvar crc   2>&1  | findstr /r /c:"^crc: 1"   && if 0 EQU 0 (
+[12:32:25 p. m.  c369e2b4]:info1:fastboot -s devicename flash crclist D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images\crclist.txt   ||  
+[12:32:25 p. m.  c369e2b4]:info1: fastboot -s devicename flash sparsecrclist D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images\sparsecrclist.txt   || 
+[12:32:25 p. m.  c369e2b4]:info1:) 
+[12:32:25 p. m.  c369e2b4]:info1:crc: 1
+[12:32:25 p. m.  c369e2b4]:info2:Sending 'crclist' (0 KB)                           OKAY [  0.002s]
+[12:32:25 p. m.  c369e2b4]:info2:Writing 'crclist'                                  OKAY [  0.003s]
+[12:32:25 p. m.  c369e2b4]:info2:Finished. Total time: 0.017s
+[12:32:25 p. m.  c369e2b4]:info2:Sending 'sparsecrclist' (0 KB)                     OKAY [  0.002s]
+[12:32:25 p. m.  c369e2b4]:info2:Writing 'sparsecrclist'                            OKAY [  0.001s]
+[12:32:25 p. m.  c369e2b4]:info2:Finished. Total time: 0.015s
+[12:32:25 p. m.  c369e2b4]:info1:$fastboot -s devicename erase boot_ab   || 
+[12:32:25 p. m.  c369e2b4]:info2:Erasing 'boot_ab'                                  (bootloader) Partition boot_a erase successfully
+[12:32:25 p. m.  c369e2b4]:info2:(bootloader) Partition boot_b erase successfully
+[12:32:25 p. m.  c369e2b4]:info2:OKAY [  0.013s]
+[12:32:25 p. m.  c369e2b4]:info2:Finished. Total time: 0.020s
+[12:32:25 p. m.  c369e2b4]:info1:$fastboot -s devicename erase opconfig   || 
+[12:32:25 p. m.  c369e2b4]:info2:Erasing 'opconfig'                                 OKAY [  0.003s]
+[12:32:25 p. m.  c369e2b4]:info2:Finished. Total time: 0.011s
+[12:32:25 p. m.  c369e2b4]:info1:$fastboot -s devicename erase opcust   || 
+[12:32:25 p. m.  c369e2b4]:info2:Erasing 'opcust'                                   OKAY [  0.003s]
+[12:32:25 p. m.  c369e2b4]:info2:Finished. Total time: 0.010s
+[12:32:25 p. m.  c369e2b4]:info1:$fastboot -s devicename flash abl_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/abl.elf   || 
+[12:32:25 p. m.  c369e2b4]:info2:Sending 'abl_ab' (199 KB)                          OKAY [  0.006s]
+[12:32:25 p. m.  c369e2b4]:info2:Writing 'abl_ab'                                   (bootloader) Partition abl_a flashed successfully
+[12:32:25 p. m.  c369e2b4]:info2:(bootloader) Partition abl_b flashed successfully
+[12:32:25 p. m.  c369e2b4]:info2:OKAY [  0.011s]
+[12:32:25 p. m.  c369e2b4]:info2:Finished. Total time: 0.032s
+[12:32:25 p. m.  c369e2b4]:info1:$fastboot -s devicename flash xbl_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/xbl_s.melf   || 
+[12:32:25 p. m.  c369e2b4]:info2:Sending 'xbl_ab' (1078 KB)                         OKAY [  0.083s]
+[12:32:25 p. m.  c369e2b4]:info2:Writing 'xbl_ab'                                   (bootloader) Partition xbl_a flashed successfully
+[12:32:25 p. m.  c369e2b4]:info2:(bootloader) Partition xbl_b flashed successfully
+[12:32:25 p. m.  c369e2b4]:info2:OKAY [  0.054s]
+[12:32:25 p. m.  c369e2b4]:info2:Finished. Total time: 0.199s
+[12:32:25 p. m.  c369e2b4]:info1:$fastboot -s devicename flash xbl_config_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/xbl_config.elf   || 
+[12:32:25 p. m.  c369e2b4]:info2:Sending 'xbl_config_ab' (139 KB)                   OKAY [  0.011s]
+[12:32:25 p. m.  c369e2b4]:info2:Writing 'xbl_config_ab'                            (bootloader) Partition xbl_config_a flashed successfully
+[12:32:25 p. m.  c369e2b4]:info2:(bootloader) Partition xbl_config_b flashed successfully
+[12:32:25 p. m.  c369e2b4]:info2:OKAY [  0.012s]
+[12:32:25 p. m.  c369e2b4]:info2:Finished. Total time: 0.078s
+[12:32:25 p. m.  c369e2b4]:info1:$fastboot -s devicename flash shrm_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/shrm.elf   || 
+[12:32:25 p. m.  c369e2b4]:info2:Sending 'shrm_ab' (67 KB)                          OKAY [  0.003s]
+[12:32:25 p. m.  c369e2b4]:info2:Writing 'shrm_ab'                                  (bootloader) Partition shrm_a flashed successfully
+[12:32:25 p. m.  c369e2b4]:info2:(bootloader) Partition shrm_b flashed successfully
+[12:32:25 p. m.  c369e2b4]:info2:OKAY [  0.005s]
+[12:32:25 p. m.  c369e2b4]:info2:Finished. Total time: 0.052s
+[12:32:25 p. m.  c369e2b4]:info1:$fastboot -s devicename flash aop_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/aop.mbn   || 
+[12:32:26 p. m.  c369e2b4]:info2:Sending 'aop_ab' (252 KB)                          OKAY [  0.025s]
+[12:32:26 p. m.  c369e2b4]:info2:Writing 'aop_ab'                                   (bootloader) Partition aop_a flashed successfully
+[12:32:26 p. m.  c369e2b4]:info2:(bootloader) Partition aop_b flashed successfully
+[12:32:26 p. m.  c369e2b4]:info2:OKAY [  0.014s]
+[12:32:26 p. m.  c369e2b4]:info2:Finished. Total time: 0.085s
+[12:32:26 p. m.  c369e2b4]:info1:$fastboot -s devicename flash aop_config_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/aop_devcfg.mbn   || 
+[12:32:26 p. m.  c369e2b4]:info2:Sending 'aop_config_ab' (15 KB)                    OKAY [  0.001s]
+[12:32:26 p. m.  c369e2b4]:info2:Writing 'aop_config_ab'                            (bootloader) Partition aop_config_a flashed successfully
+[12:32:26 p. m.  c369e2b4]:info2:(bootloader) Partition aop_config_b flashed successfully
+[12:32:26 p. m.  c369e2b4]:info2:OKAY [  0.004s]
+[12:32:26 p. m.  c369e2b4]:info2:Finished. Total time: 0.018s
+[12:32:26 p. m.  c369e2b4]:info1:$fastboot -s devicename flash tz_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/tz.mbn   || 
+[12:32:26 p. m.  c369e2b4]:info2:Sending 'tz_ab' (3708 KB)                          OKAY [  0.215s]
+[12:32:26 p. m.  c369e2b4]:info2:Writing 'tz_ab'                                    (bootloader) Partition tz_a flashed successfully
+[12:32:26 p. m.  c369e2b4]:info2:(bootloader) Partition tz_b flashed successfully
+[12:32:26 p. m.  c369e2b4]:info2:OKAY [  0.168s]
+[12:32:26 p. m.  c369e2b4]:info2:Finished. Total time: 0.442s
+[12:32:26 p. m.  c369e2b4]:info1:$fastboot -s devicename flash devcfg_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/devcfg.mbn   || 
+[12:32:26 p. m.  c369e2b4]:info2:Sending 'devcfg_ab' (55 KB)                        OKAY [  0.002s]
+[12:32:26 p. m.  c369e2b4]:info2:Writing 'devcfg_ab'                                (bootloader) Partition devcfg_a flashed successfully
+[12:32:26 p. m.  c369e2b4]:info2:(bootloader) Partition devcfg_b flashed successfully
+[12:32:26 p. m.  c369e2b4]:info2:OKAY [  0.005s]
+[12:32:26 p. m.  c369e2b4]:info2:Finished. Total time: 0.050s
+[12:32:26 p. m.  c369e2b4]:info1:$fastboot -s devicename flash featenabler_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/featenabler.mbn   || 
+[12:32:26 p. m.  c369e2b4]:info2:Sending 'featenabler_ab' (89 KB)                   OKAY [  0.005s]
+[12:32:26 p. m.  c369e2b4]:info2:Writing 'featenabler_ab'                           (bootloader) Partition featenabler_a flashed successfully
+[12:32:26 p. m.  c369e2b4]:info2:(bootloader) Partition featenabler_b flashed successfully
+[12:32:26 p. m.  c369e2b4]:info2:OKAY [  0.007s]
+[12:32:26 p. m.  c369e2b4]:info2:Finished. Total time: 0.071s
+[12:32:26 p. m.  c369e2b4]:info1:$fastboot -s devicename flash hyp_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/hypvmperformance.mbn   || 
+[12:32:26 p. m.  c369e2b4]:info2:Sending 'hyp_ab' (1226 KB)                         OKAY [  0.066s]
+[12:32:26 p. m.  c369e2b4]:info2:Writing 'hyp_ab'                                   (bootloader) Partition hyp_a flashed successfully
+[12:32:26 p. m.  c369e2b4]:info2:(bootloader) Partition hyp_b flashed successfully
+[12:32:26 p. m.  c369e2b4]:info2:OKAY [  0.007s]
+[12:32:26 p. m.  c369e2b4]:info1:$fastboot -s devicename flash uefi_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/uefi.elf   || 
+[12:32:26 p. m.  c369e2b4]:info2:Finished. Total time: 0.126s
+[12:32:26 p. m.  c369e2b4]:info2:Sending 'uefi_ab' (2695 KB)                        OKAY [  0.060s]
+[12:32:27 p. m.  c369e2b4]:info2:Writing 'uefi_ab'                                  (bootloader) Partition uefi_a flashed successfully
+[12:32:27 p. m.  c369e2b4]:info2:(bootloader) Partition uefi_b flashed successfully
+[12:32:27 p. m.  c369e2b4]:info2:OKAY [  0.121s]
+[12:32:27 p. m.  c369e2b4]:info2:Finished. Total time: 0.198s
+[12:32:27 p. m.  c369e2b4]:info1:$fastboot -s devicename flash uefisecapp_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/uefi_sec.mbn   || 
+[12:32:27 p. m.  c369e2b4]:info2:Sending 'uefisecapp_ab' (167 KB)                   OKAY [  0.006s]
+[12:32:27 p. m.  c369e2b4]:info2:Writing 'uefisecapp_ab'                            (bootloader) Partition uefisecapp_a flashed successfully
+[12:32:27 p. m.  c369e2b4]:info2:(bootloader) Partition uefisecapp_b flashed successfully
+[12:32:27 p. m.  c369e2b4]:info2:OKAY [  0.011s]
+[12:32:27 p. m.  c369e2b4]:info2:Finished. Total time: 0.087s
+[12:32:27 p. m.  c369e2b4]:info1:$fastboot -s devicename flash modem_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/NON-HLOS.bin   || 
+[12:32:40 p. m.  c369e2b4]:info2:Sending 'modem_ab' (288076 KB)                     OKAY [ 13.615s]
+[12:32:53 p. m.  c369e2b4]:info2:Writing 'modem_ab'                                 (bootloader) Partition modem_a flashed successfully
+[12:32:53 p. m.  c369e2b4]:info2:(bootloader) Partition modem_b flashed successfully
+[12:32:53 p. m.  c369e2b4]:info2:OKAY [ 12.785s]
+[12:32:53 p. m.  c369e2b4]:info2:Finished. Total time: 26.439s
+[12:32:53 p. m.  c369e2b4]:info1:$fastboot -s devicename flash bluetooth_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/BTFM.bin   || 
+[12:32:53 p. m.  c369e2b4]:info2:Sending 'bluetooth_ab' (1788 KB)                   OKAY [  0.103s]
+[12:32:54 p. m.  c369e2b4]:info2:Writing 'bluetooth_ab'                             (bootloader) Partition bluetooth_a flashed successfully
+[12:32:54 p. m.  c369e2b4]:info2:(bootloader) Partition bluetooth_b flashed successfully
+[12:32:54 p. m.  c369e2b4]:info2:OKAY [  0.082s]
+[12:32:54 p. m.  c369e2b4]:info2:Finished. Total time: 0.225s
+[12:32:54 p. m.  c369e2b4]:info1:$fastboot -s devicename flash dsp_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/dspso.bin   || 
+[12:32:58 p. m.  c369e2b4]:info2:Sending 'dsp_ab' (65536 KB)                        OKAY [  3.914s]
+[12:33:00 p. m.  c369e2b4]:info2:Writing 'dsp_ab'                                   (bootloader) Partition dsp_a flashed successfully
+[12:33:00 p. m.  c369e2b4]:info2:(bootloader) Partition dsp_b flashed successfully
+[12:33:00 p. m.  c369e2b4]:info2:OKAY [  2.766s]
+[12:33:00 p. m.  c369e2b4]:info2:Finished. Total time: 6.716s
+[12:33:00 p. m.  c369e2b4]:info1:$fastboot -s devicename flash keymaster_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/keymint.mbn   || 
+[12:33:00 p. m.  c369e2b4]:info2:Sending 'keymaster_ab' (359 KB)                    OKAY [  0.010s]
+[12:33:00 p. m.  c369e2b4]:info2:Writing 'keymaster_ab'                             (bootloader) Partition keymaster_a flashed successfully
+[12:33:00 p. m.  c369e2b4]:info2:(bootloader) Partition keymaster_b flashed successfully
+[12:33:00 p. m.  c369e2b4]:info2:OKAY [  0.019s]
+[12:33:00 p. m.  c369e2b4]:info2:Finished. Total time: 0.043s
+[12:33:00 p. m.  c369e2b4]:info1:$fastboot -s devicename flash qupfw_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/qupv3fw.elf   || 
+[12:33:00 p. m.  c369e2b4]:info2:Sending 'qupfw_ab' (49 KB)                         OKAY [  0.002s]
+[12:33:00 p. m.  c369e2b4]:info2:Writing 'qupfw_ab'                                 (bootloader) Partition qupfw_a flashed successfully
+[12:33:00 p. m.  c369e2b4]:info2:(bootloader) Partition qupfw_b flashed successfully
+[12:33:00 p. m.  c369e2b4]:info2:OKAY [  0.007s]
+[12:33:00 p. m.  c369e2b4]:info2:Finished. Total time: 0.051s
+[12:33:00 p. m.  c369e2b4]:info1:$fastboot -s devicename flash multiimgoem_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/multi_image.mbn   || 
+[12:33:01 p. m.  c369e2b4]:info2:Sending 'multiimgoem_ab' (32 KB)                   OKAY [  0.002s]
+[12:33:01 p. m.  c369e2b4]:info2:Writing 'multiimgoem_ab'                           (bootloader) Partition multiimgoem_a flashed successfully
+[12:33:01 p. m.  c369e2b4]:info2:(bootloader) Partition multiimgoem_b flashed successfully
+[12:33:01 p. m.  c369e2b4]:info2:OKAY [  0.005s]
+[12:33:01 p. m.  c369e2b4]:info2:Finished. Total time: 0.020s
+[12:33:01 p. m.  c369e2b4]:info1:$fastboot -s devicename flash multiimgqti_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/multi_image_qti.mbn   || 
+[12:33:01 p. m.  c369e2b4]:info2:Sending 'multiimgqti_ab' (11 KB)                   OKAY [  0.002s]
+[12:33:01 p. m.  c369e2b4]:info2:Writing 'multiimgqti_ab'                           (bootloader) Partition multiimgqti_a flashed successfully
+[12:33:01 p. m.  c369e2b4]:info2:(bootloader) Partition multiimgqti_b flashed successfully
+[12:33:01 p. m.  c369e2b4]:info2:OKAY [  0.005s]
+[12:33:01 p. m.  c369e2b4]:info2:Finished. Total time: 0.037s
+[12:33:01 p. m.  c369e2b4]:info1:$fastboot -s devicename flash cpucp_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/cpucp.elf   || 
+[12:33:01 p. m.  c369e2b4]:info2:Sending 'cpucp_ab' (152 KB)                        OKAY [  0.012s]
+[12:33:01 p. m.  c369e2b4]:info2:Writing 'cpucp_ab'                                 (bootloader) Partition cpucp_a flashed successfully
+[12:33:01 p. m.  c369e2b4]:info2:(bootloader) Partition cpucp_b flashed successfully
+[12:33:01 p. m.  c369e2b4]:info2:OKAY [  0.008s]
+[12:33:01 p. m.  c369e2b4]:info2:Finished. Total time: 0.056s
+[12:33:01 p. m.  c369e2b4]:info1:$fastboot -s devicename flash logfs D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/logfs_ufs_8mb.bin   || 
+[12:33:01 p. m.  c369e2b4]:info2:Sending 'logfs' (16 KB)                            OKAY [  0.002s]
+[12:33:01 p. m.  c369e2b4]:info2:Writing 'logfs'                                    OKAY [  0.002s]
+[12:33:01 p. m.  c369e2b4]:info2:Finished. Total time: 0.034s
+[12:33:01 p. m.  c369e2b4]:info1:$fastboot -s devicename flash rtice D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images\rtice.mbn   || 
+[12:33:01 p. m.  c369e2b4]:info2:Sending 'rtice' (240 KB)                           OKAY [  0.017s]
+[12:33:01 p. m.  c369e2b4]:info2:Writing 'rtice'                                    OKAY [  0.011s]
+[12:33:01 p. m.  c369e2b4]:info2:Finished. Total time: 0.076s
+[12:33:01 p. m.  c369e2b4]:info1:$fastboot -s devicename flash rescue D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/rescue.img   || 
+[12:33:01 p. m.  c369e2b4]:info2:Sending 'rescue' (40 KB)                           OKAY [  0.002s]
+[12:33:01 p. m.  c369e2b4]:info2:Writing 'rescue'                                   OKAY [  0.003s]
+[12:33:01 p. m.  c369e2b4]:info2:Finished. Total time: 0.026s
+[12:33:01 p. m.  c369e2b4]:info1:$fastboot -s devicename flash storsec D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/storsec.mbn   || 
+[12:33:01 p. m.  c369e2b4]:info2:Sending 'storsec' (31 KB)                          OKAY [  0.002s]
+[12:33:01 p. m.  c369e2b4]:info2:Writing 'storsec'                                  OKAY [  0.004s]
+[12:33:01 p. m.  c369e2b4]:info2:Finished. Total time: 0.018s
+[12:33:01 p. m.  c369e2b4]:info1:$fastboot -s devicename flash toolsfv D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/tools.fv   || 
+[12:33:01 p. m.  c369e2b4]:info2:Sending 'toolsfv' (384 KB)                         OKAY [  0.040s]
+[12:33:01 p. m.  c369e2b4]:info2:Writing 'toolsfv'                                  OKAY [  0.002s]
+[12:33:01 p. m.  c369e2b4]:info2:Finished. Total time: 0.083s
+[12:33:01 p. m.  c369e2b4]:info1:$fastboot -s devicename flash xbl_ramdump_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/XblRamdump.elf   || 
+[12:33:01 p. m.  c369e2b4]:info2:Sending 'xbl_ramdump_ab' (791 KB)                  OKAY [  0.041s]
+[12:33:01 p. m.  c369e2b4]:info2:Writing 'xbl_ramdump_ab'                           (bootloader) Partition xbl_ramdump_a flashed successfully
+[12:33:01 p. m.  c369e2b4]:info2:(bootloader) Partition xbl_ramdump_b flashed successfully
+[12:33:01 p. m.  c369e2b4]:info2:OKAY [  0.007s]
+[12:33:01 p. m.  c369e2b4]:info2:Finished. Total time: 0.106s
+[12:33:01 p. m.  c369e2b4]:info1:$fastboot -s devicename flash xbl_sc_test_mode D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/xbl_sc_test_mode.bin   || 
+[12:33:01 p. m.  c369e2b4]:info2:Sending 'xbl_sc_test_mode' (64 KB)                 OKAY [  0.003s]
+[12:33:01 p. m.  c369e2b4]:info2:Writing 'xbl_sc_test_mode'                         OKAY [  0.002s]
+[12:33:01 p. m.  c369e2b4]:info2:Finished. Total time: 0.020s
+[12:33:01 p. m.  c369e2b4]:info1:$fastboot -s devicename erase imagefv_ab   || 
+[12:33:01 p. m.  c369e2b4]:info2:Erasing 'imagefv_ab'                               (bootloader) Partition imagefv_a erase successfully
+[12:33:01 p. m.  c369e2b4]:info2:(bootloader) Partition imagefv_b erase successfully
+[12:33:01 p. m.  c369e2b4]:info2:OKAY [  0.008s]
+[12:33:01 p. m.  c369e2b4]:info2:Finished. Total time: 0.022s
+[12:33:01 p. m.  c369e2b4]:info1:$fastboot -s devicename flash imagefv_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/imagefv.elf   || 
+[12:33:02 p. m.  c369e2b4]:info2:Sending 'imagefv_ab' (6151 KB)                     OKAY [  0.416s]
+[12:33:02 p. m.  c369e2b4]:info2:Writing 'imagefv_ab'                               (bootloader) Partition imagefv_a flashed successfully
+[12:33:02 p. m.  c369e2b4]:info2:(bootloader) Partition imagefv_b flashed successfully
+[12:33:02 p. m.  c369e2b4]:info2:OKAY [  0.285s]
+[12:33:02 p. m.  c369e2b4]:info2:Finished. Total time: 0.755s
+[12:33:02 p. m.  c369e2b4]:info1:$fastboot -s devicename flash super D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/super.img   || 
+[12:34:50 p. m.  c369e2b4]:info2:Sending sparse 'super' 1/9 (722092 KB)             OKAY [ 16.344s]
+[12:34:50 p. m.  c369e2b4]:info2:Writing 'super'                                    OKAY [  0.008s]
+[12:35:07 p. m.  c369e2b4]:info2:Sending sparse 'super' 2/9 (720896 KB)             OKAY [ 16.272s]
+[12:35:29 p. m.  c369e2b4]:info2:Writing 'super'                                    OKAY [ 22.450s]
+[12:35:47 p. m.  c369e2b4]:info2:Sending sparse 'super' 3/9 (758884 KB)             OKAY [ 17.457s]
+[12:36:07 p. m.  c369e2b4]:info2:Writing 'super'                                    OKAY [ 20.316s]
+[12:36:23 p. m.  c369e2b4]:info2:Sending sparse 'super' 4/9 (720896 KB)             OKAY [ 16.033s]
+[12:36:46 p. m.  c369e2b4]:info2:Writing 'super'                                    OKAY [ 22.852s]
+[12:37:03 p. m.  c369e2b4]:info2:Sending sparse 'super' 5/9 (782872 KB)             OKAY [ 17.513s]
+[12:37:24 p. m.  c369e2b4]:info2:Writing 'super'                                    OKAY [ 20.179s]
+[12:37:41 p. m.  c369e2b4]:info2:Sending sparse 'super' 6/9 (758376 KB)             OKAY [ 17.262s]
+[12:38:05 p. m.  c369e2b4]:info2:Writing 'super'                                    OKAY [ 23.928s]
+[12:38:22 p. m.  c369e2b4]:info2:Sending sparse 'super' 7/9 (768780 KB)             OKAY [ 17.374s]
+[12:38:43 p. m.  c369e2b4]:info2:Writing 'super'                                    OKAY [ 21.154s]
+[12:39:00 p. m.  c369e2b4]:info2:Sending sparse 'super' 8/9 (720896 KB)             OKAY [ 16.267s]
+[12:39:23 p. m.  c369e2b4]:info2:Writing 'super'                                    OKAY [ 22.962s]
+[12:39:30 p. m.  c369e2b4]:info2:Sending sparse 'super' 9/9 (304116 KB)             OKAY [  7.627s]
+[12:40:00 p. m.  c369e2b4]:info2:Writing 'super'                                    OKAY [ 30.275s]
+[12:40:00 p. m.  c369e2b4]:info2:Finished. Total time: 418.272s
+[12:40:00 p. m.  c369e2b4]:info1:$fastboot -s devicename flash vendor_boot_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/vendor_boot.img   || 
+[12:40:06 p. m.  c369e2b4]:info2:Sending 'vendor_boot_ab' (98304 KB)                OKAY [  4.499s]
+[12:40:22 p. m.  c369e2b4]:info2:Writing 'vendor_boot_ab'                           (bootloader) Partition vendor_boot_a flashed successfully
+[12:40:22 p. m.  c369e2b4]:info2:(bootloader) Partition vendor_boot_b flashed successfully
+[12:40:22 p. m.  c369e2b4]:info2:OKAY [ 16.035s]
+[12:40:22 p. m.  c369e2b4]:info2:Finished. Total time: 21.439s
+[12:40:22 p. m.  c369e2b4]:info1:$fastboot -s devicename flash dtbo_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/dtbo.img   || 
+[12:40:23 p. m.  c369e2b4]:info2:Sending 'dtbo_ab' (24576 KB)                       OKAY [  1.104s]
+[12:40:24 p. m.  c369e2b4]:info2:Writing 'dtbo_ab'                                  (bootloader) Partition dtbo_a flashed successfully
+[12:40:24 p. m.  c369e2b4]:info2:(bootloader) Partition dtbo_b flashed successfully
+[12:40:24 p. m.  c369e2b4]:info2:OKAY [  1.112s]
+[12:40:24 p. m.  c369e2b4]:info2:Finished. Total time: 2.298s
+[12:40:24 p. m.  c369e2b4]:info1:$fastboot -s devicename flash vbmeta_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/vbmeta.img   || 
+[12:40:24 p. m.  c369e2b4]:info2:Sending 'vbmeta_ab' (8 KB)                         OKAY [  0.002s]
+[12:40:24 p. m.  c369e2b4]:info2:Writing 'vbmeta_ab'                                (bootloader) Partition vbmeta_a flashed successfully
+[12:40:24 p. m.  c369e2b4]:info2:(bootloader) Partition vbmeta_b flashed successfully
+[12:40:24 p. m.  c369e2b4]:info2:OKAY [  0.002s]
+[12:40:24 p. m.  c369e2b4]:info1:$fastboot -s devicename flash vbmeta_system_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/vbmeta_system.img   || 
+[12:40:24 p. m.  c369e2b4]:info2:Finished. Total time: 0.043s
+[12:40:24 p. m.  c369e2b4]:info2:Sending 'vbmeta_system_ab' (4 KB)                  OKAY [  0.002s]
+[12:40:24 p. m.  c369e2b4]:info2:Writing 'vbmeta_system_ab'                         (bootloader) Partition vbmeta_system_a flashed successfully
+[12:40:24 p. m.  c369e2b4]:info2:(bootloader) Partition vbmeta_system_b flashed successfully
+[12:40:24 p. m.  c369e2b4]:info2:OKAY [  0.001s]
+[12:40:24 p. m.  c369e2b4]:info2:Finished. Total time: 0.030s
+[12:40:24 p. m.  c369e2b4]:info1:$fastboot -s devicename erase metadata   || 
+[12:40:24 p. m.  c369e2b4]:info2:Erasing 'metadata'                                 OKAY [  0.006s]
+[12:40:24 p. m.  c369e2b4]:info2:Finished. Total time: 0.014s
+[12:40:24 p. m.  c369e2b4]:info1:$fastboot -s devicename flash metadata D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/metadata.img   || 
+[12:40:25 p. m.  c369e2b4]:info2:Sending 'metadata' (44 KB)                         OKAY [  0.002s]
+[12:40:25 p. m.  c369e2b4]:info2:Writing 'metadata'                                 OKAY [  0.003s]
+[12:40:25 p. m.  c369e2b4]:info2:Finished. Total time: 0.046s
+[12:40:25 p. m.  c369e2b4]:info1:$fastboot -s devicename flash userdata D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/userdata.img   || 
+[12:40:34 p. m.  c369e2b4]:info2:Sending 'userdata' (119352 KB)                     OKAY [  2.631s]
+[12:40:34 p. m.  c369e2b4]:info2:Writing 'userdata'                                 OKAY [  0.009s]
+[12:40:34 p. m.  c369e2b4]:info2:Finished. Total time: 9.399s
+[12:40:34 p. m.  c369e2b4]:info1:$fastboot -s devicename flash vm-bootsys_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/vm-bootsys.img   || 
+[12:40:45 p. m.  c369e2b4]:info2:Sending 'vm-bootsys_ab' (246128 KB)                OKAY [  5.372s]
+[12:40:58 p. m.  c369e2b4]:info2:Writing 'vm-bootsys_ab'                            (bootloader) Partition vm-bootsys_a flashed successfully
+[12:41:11 p. m.  c369e2b4]:info2:(bootloader) Partition vm-bootsys_b flashed successfully
+[12:41:11 p. m.  c369e2b4]:info2:OKAY [ 26.132s]
+[12:41:11 p. m.  c369e2b4]:info2:Finished. Total time: 36.818s
+[12:41:11 p. m.  c369e2b4]:info1:$fastboot -s devicename flash cust D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/cust.img   || 
+[12:41:45 p. m.  c369e2b4]:info2:Sending sparse 'cust' 1/2 (774624 KB)              OKAY [ 17.635s]
+[12:41:45 p. m.  c369e2b4]:info2:Writing 'cust'                                     OKAY [  0.004s]
+[12:41:56 p. m.  c369e2b4]:info2:Sending sparse 'cust' 2/2 (526260 KB)              OKAY [ 11.785s]
+[12:42:24 p. m.  c369e2b4]:info2:Writing 'cust'                                     OKAY [ 28.025s]
+[12:42:24 p. m.  c369e2b4]:info2:Finished. Total time: 73.613s
+[12:42:24 p. m.  c369e2b4]:info1:$fastboot -s devicename flash recovery_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/recovery.img   || 
+[12:42:30 p. m.  c369e2b4]:info2:Sending 'recovery_ab' (102400 KB)                  OKAY [  4.452s]
+[12:42:56 p. m.  c369e2b4]:info2:Writing 'recovery_ab'                              (bootloader) Partition recovery_a flashed successfully
+[12:42:57 p. m.  c369e2b4]:info2:(bootloader) Partition recovery_b flashed successfully
+[12:42:57 p. m.  c369e2b4]:info2:OKAY [ 26.747s]
+[12:42:57 p. m.  c369e2b4]:info2:Finished. Total time: 32.088s
+[12:42:57 p. m.  c369e2b4]:info1:$fastboot -s devicename flash boot_ab D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images/boot.img   || 
+[12:43:05 p. m.  c369e2b4]:info2:Sending 'boot_ab' (196608 KB)                      OKAY [  8.294s]
+[12:43:13 p. m.  c369e2b4]:info2:Writing 'boot_ab'                                  (bootloader) Partition boot_a flashed successfully
+[12:43:14 p. m.  c369e2b4]:info2:(bootloader) Partition boot_b flashed successfully
+[12:43:14 p. m.  c369e2b4]:info2:OKAY [  8.710s]
+[12:43:14 p. m.  c369e2b4]:info2:Finished. Total time: 17.105s
+[12:43:14 p. m.  c369e2b4]:info1:$fastboot -s devicename flash misc D:\flash\zeus_global_images_V14.0.8.0.TLBMIXM_20230630.0000.00_13.0_global_9f5e328c21\zeus_global_images_V14.0.8.0.TLBMIXM_13.0\images\misc.img   || 
+[12:43:14 p. m.  c369e2b4]:info2:Sending 'misc' (8 KB)                              OKAY [  0.002s]
+[12:43:14 p. m.  c369e2b4]:info2:Writing 'misc'                                     OKAY [  0.000s]
+[12:43:14 p. m.  c369e2b4]:info2:Finished. Total time: 0.047s
+[12:43:14 p. m.  c369e2b4]:info1:$fastboot -s devicename set_active a   || 
+[12:43:14 p. m.  c369e2b4]:info2:Setting current slot to 'a'                        OKAY [  0.009s]
+[12:43:14 p. m.  c369e2b4]:info2:Finished. Total time: 0.011s
+[12:43:14 p. m.  c369e2b4]:info1:$fastboot -s devicename oem lock   || 
+[12:43:14 p. m.  c369e2b4]:info2:                                                   OKAY [  0.036s]
+[12:43:14 p. m.  c369e2b4]:info2:Finished. Total time: 0.036s
+[12:43:14 p. m.  c369e2b4]:begin FlashDone
+[12:43:14 p. m.  c369e2b4]:errMsg is null
+[12:43:14 p. m.  c369e2b4]:begin checkPoint
+[12:43:14 p. m.  c369e2b4]:catch checkpoint (\$fastboot -s .* lock)
+[12:43:14 p. m.  c369e2b4]:flash done
+[12:43:14 p. m.  c369e2b4]:process exit.
+[12:43:14 p. m.  c369e2b4]:flashSuccess True
+[12:43:14 p. m.  c369e2b4]:isFactory False CheckCPUID False
+[12:43:14 p. m.  c369e2b4]:before:flashSuccess is True set IsUpdate:True set IsDone True
+[12:43:14 p. m.  c369e2b4]:after:flashSuccess is True set IsUpdate:false set IsDone true

@@ -1,0 +1,29 @@
+[01:09:48 p. m.  c369e2b4]:MiFlash 2020.3.14.0
+[01:09:48 p. m.  c369e2b4]:vboytest index:1
+[01:09:48 p. m.  c369e2b4]:idproduct: 53261 idvendor: 6353
+[01:09:48 p. m.  c369e2b4]:Thread id:8 Thread name:c369e2b4
+[01:09:48 p. m.  c369e2b4]:image path:D:\flash\sweet_k6a_global_images_V14.0.1.0.THGMIXM_20230727.0000.00_13.0_global_32f179cc8d\sweet_k6a_global_images_V14.0.1.0.THGMIXM_13.0
+[01:09:48 p. m.  c369e2b4]:env android path:"C:\Users\cadiaz\Downloads\MiFlash2020-3-14-0\Source\ThirdParty\Google\Android"
+[01:09:48 p. m.  c369e2b4]:script :D:\flash\sweet_k6a_global_images_V14.0.1.0.THGMIXM_20230727.0000.00_13.0_global_32f179cc8d\sweet_k6a_global_images_V14.0.1.0.THGMIXM_13.0\flash_all_lock.bat
+[01:09:48 p. m.  c369e2b4]:Physical Memory Usage:3825664 Byte
+[01:09:48 p. m.  c369e2b4]:start process id 12740 name cmd
+[01:09:48 p. m.  c369e2b4]:info1:$if exist D:\flash\sweet_k6a_global_images_V14.0.1.0.THGMIXM_20230727.0000.00_13.0_global_32f179cc8d\sweet_k6a_global_images_V14.0.1.0.THGMIXM_13.0\images\anti_version.txt (for /F "delims==" %a in (D:\flash\sweet_k6a_global_images_V14.0.1.0.THGMIXM_20230727.0000.00_13.0_global_32f179cc8d\sweet_k6a_global_images_V14.0.1.0.THGMIXM_13.0\images\anti_version.txt) do (set CURRENT_ANTI_VER=%a ) ) 
+[01:09:48 p. m.  c369e2b4]:info1:$(set CURRENT_ANTI_VER=1 ) 
+[01:09:48 p. m.  c369e2b4]:info1:$if [1] EQU [] set CURRENT_ANTI_VER=0 
+[01:09:48 p. m.  c369e2b4]:info1:$for /F "tokens=2 delims=: " %i in ('fastboot -s devicename getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i ) 
+[01:09:48 p. m.  c369e2b4]:info1:$(set version=1 ) 
+[01:09:48 p. m.  c369e2b4]:info1:$if [1] EQU [] set version=0 
+[01:09:48 p. m.  c369e2b4]:info1:$set anticheck="antirollback check pass" 
+[01:09:48 p. m.  c369e2b4]:info1:$if 1 GTR 1 set anticheck="Current device antirollback version is greater than this pakcage" 
+[01:09:48 p. m.  c369e2b4]:info1:$echo "antirollback check pass"   | findstr /r /c:"pass"   || 
+[01:09:49 p. m.  c369e2b4]:info1:"antirollback check pass" 
+[01:09:49 p. m.  c369e2b4]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *sweet"   || echo Missmatching image and device 
+[01:09:49 p. m.  c369e2b4]:info1:Missmatching image and device
+[01:09:49 p. m.  c369e2b4]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *sweet"   || exit /B 1 
+[01:09:49 p. m.  c369e2b4]:begin FlashDone
+[01:09:49 p. m.  c369e2b4]:error:Missmatching image and device
+[01:09:49 p. m.  c369e2b4]:process exit.
+[01:09:49 p. m.  c369e2b4]:flashSuccess False
+[01:09:49 p. m.  c369e2b4]:isFactory False CheckCPUID False
+[01:09:49 p. m.  c369e2b4]:before:flashSuccess is False set IsUpdate:True set IsDone True
+[01:09:49 p. m.  c369e2b4]:after:flashSuccess is False set IsUpdate:false set IsDone true

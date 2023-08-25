@@ -1,0 +1,9 @@
+[01:10:17 p. m.  c369e2b4]:MiFlash 2020.3.14.0
+[01:10:17 p. m.  c369e2b4]:vboytest index:1
+[01:10:17 p. m.  c369e2b4]:idproduct: 53261 idvendor: 6353
+[01:10:17 p. m.  c369e2b4]:Thread id:14 Thread name:c369e2b4
+[01:10:17 p. m.  c369e2b4]:can not found file flash_all_lock.bat
+[01:10:17 p. m.  c369e2b4]:flashSuccess False
+[01:10:17 p. m.  c369e2b4]:isFactory False CheckCPUID False
+[01:10:17 p. m.  c369e2b4]:before:flashSuccess is False set IsUpdate:True set IsDone True
+[01:10:17 p. m.  c369e2b4]:after:flashSuccess is False set IsUpdate:false set IsDone true
